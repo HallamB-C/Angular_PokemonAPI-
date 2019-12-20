@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <h1>{{title}}</h1>
+  <label>Pokemon ID: <input type="number" [ngModel]="pokeID" (ngModelChange)="pokeID = $event" style="width: 45px;"/> </label>
+  <button (click)="getPokemonById(pokeID)">Get a pokemon by its ID</button>
+  <br />
+  <label>Pokemon Name: <input type="text" [ngModel]="pokeName" (ngModelChange)="pokeName = $event" /> </label>
+  <button (click)="getPokemonByName(pokeName)">Get a pokemon by its name</button>
+  <!--{{pokeID}}-->
+  <br />
+  <label>Name: </label> <label>{{pokemon.name}}</label>
+  <br />
+  <label>Height: </label> <label>{{pokemon.height}}m</label>
+  <br />
+  <label>Weight: </label> <label>{{pokemon.weight}}kg</label>
+  <br />
+  <label>BMI: </label> <label>{{pokemon.bmi}}</label>
+  <br />
+  <label>Healthy?: </label> <label>{{pokemon.healthy}}</label>
+</body>
+</html>
